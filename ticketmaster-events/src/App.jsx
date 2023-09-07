@@ -1,7 +1,8 @@
 import './App.css'
-import Navbar from './components/Navbar/index'
-import Events from './components/Events'
+import Navbar from './components/Navbar/nav'
+import Events from './components/Events/event'
 import { useState } from 'react';
+import Form from './components/Form/form';
 
 function App() {
 
@@ -14,6 +15,7 @@ console.log(search);
 
   return (
     <>
+    <Form />
      <Navbar onSearch={handleNavSearch} />
      <Events searchValue={search} />
     </>
