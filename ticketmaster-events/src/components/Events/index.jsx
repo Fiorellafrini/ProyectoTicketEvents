@@ -5,6 +5,11 @@ import data from "../../data/events.json";
 const events = data._embedded.events;
 // console.log(events)
 
+const handleEventItemClick=(id)=>{
+    console.log("clickeandooo",id)
+}
+
+
 const Events = () => {
   const eventsComponent = events.map((prop) => (
     <EventsItem
@@ -12,6 +17,8 @@ const Events = () => {
       name={prop.name}
       info={prop.info}
       images={prop.images[0].url}
+      onEventClick={handleEventItemClick}
+      id={prop.id}
     />
   ));
   // console.log(eventsComponent)
